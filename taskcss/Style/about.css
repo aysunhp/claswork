@@ -1,0 +1,16 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./../picture/strawberry.jpg");
+}
+table{
+    font-size: 25px;
+    font-weight: 25px;
+    color:antiquewhite;
+}
+a{
+    font-size: 35px;
+    font-weight: 35px;
+    padding: 10px;
+    color: antiquewhite;
+}

@@ -1,0 +1,18 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./../picture/macaron.jpg");
+}
+label{
+    font-size: 25px;
+    font-weight: 25px;
+}
+a{
+    font-size: 35px;
+    font-weight: 35px;
+    padding: 10px;
+}
+button{
+    font-size: 25px;
+    font-weight: 25px;
+}

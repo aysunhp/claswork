@@ -1,0 +1,20 @@
+body{
+    background-image: url("./../picture/berries.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+label{
+    font-size: 25px;
+    font-weight: 25px;
+    color: bisque;
+}
+a{
+    font-size: 35px;
+    font-weight: 35px;
+    padding: 10px;
+    color: bisque;
+}
+button{
+    font-size: 25px;
+    font-weight: 25px;
+}
