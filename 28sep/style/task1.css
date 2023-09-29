@@ -1,0 +1,28 @@
+div.box{
+    width: 400px;
+    border:1px solid gray;
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px gray;
+    font-family: 'Roboto';
+    padding: 20px 0px;
+}
+div.circle{
+    width: 150px;
+    height: 150px;
+    border:1px solid gray;
+    border-radius: 50%;
+    background-color: darkblue;
+    margin:auto;
+    margin-top: 15px;
+}
+h1{
+    margin:10px 0px;
+}
+span:not(.contact){
+    font-size: 20px;
+}
+span.contact{
+    margin: 2px;
+}
