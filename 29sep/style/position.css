@@ -1,0 +1,45 @@
+.main{
+    border: 1px solid gray;
+    width: 80%;
+    height: 500px;
+    background-color: blanchedalmond;
+    position: relative;
+    margin:50px;
+}
+.box{
+    border: 1px solid cornsilk;
+    width: 20%;
+    height: 80px;
+}
+.box1{
+    background-color:darkorchid;
+
+}
+.box2{
+    background-color:lightcoral;
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+
+.box3{
+    background-color:crimson;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 10%);
+}
+
+.box4{
+    background-color:deeppink;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.box5{
+    background-color:yellowgreen;
+    position: absolute;
+    bottom:0;
+    right: 0;
+}
+
