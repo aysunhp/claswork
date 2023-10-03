@@ -1,0 +1,51 @@
+.container{
+    border:1px solid black;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.box{
+    border:1px solid black;
+    width: 100px;
+    height: 100px;
+    justify-content: space-between;
+}
+.box1{
+    background-color: aquamarine;
+}
+.box2{
+    background-color: olivedrab;
+}
+.box3{
+    background-color: limegreen;
+}
+.box4{
+    background-color: rebeccapurple;
+}
+.box5{
+    background-color: hotpink;
+}
+.box6{
+    background-color: beige;
+}
+.box7{
+    background-color:cornflowerblue;
+}
+.box8{
+    background-color:darkcyan;
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 560px) {
+    .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
+  }
+  
