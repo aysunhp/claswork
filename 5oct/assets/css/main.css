@@ -1,0 +1,77 @@
+header {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header h1 {
+  margin: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: "Roboto";
+}
+
+header h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+header p {
+  font-size: 16px;
+  font-weight: 400;
+  color: gray;
+}
+
+main .card-content h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+main .card-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+main .card-content div.quality {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  background-color: #F2F8FB;
+}
+
+main {
+  border: 1px solid black;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+main div.card1 {
+  border: 1px solid black;
+  width: 400px;
+  margin: 0 auto;
+}
+main div.card1 .image-wrapper {
+  border: 1px solid black;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+main div.card1 .image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+main div.card1 div.card-content {
+  width: 100%;
+  border: 1px solid red;
+  padding: 10px;
+}/*# sourceMappingURL=main.css.map */

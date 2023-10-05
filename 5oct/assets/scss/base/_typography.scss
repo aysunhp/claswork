@@ -1,0 +1,30 @@
+h1,h2,h3,h4,h5,h6,p,span,a{
+    font-family: 'Roboto';
+}
+header{
+    h1{
+        font-size: 34px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 400;
+        color: gray;
+    }
+}
+main{
+    .card-content{
+        h1{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400; 
+        }
+        div.quality{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
