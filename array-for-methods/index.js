@@ -1158,31 +1158,39 @@
 
 // task
 
-let arr = [
-  {
-    name: "cola",
-    price: 2,
-    isDiscounted: true,
-  },
-  {
-    name: "fanta",
-    price: 1.5,
-    isDiscounted: true,
-  },
-  {
-    name: "sprite",
-    price: 4,
-    isDiscounted: true,
-  },
-];
+// let arr = [
+//   {
+//     name: "cola",
+//     price: 2,
+//     isDiscounted: true,
+//   },
+//   {
+//     name: "fanta",
+//     price: 1.5,
+//     isDiscounted: true,
+//   },
+//   {
+//     name: "sprite",
+//     price: 4,
+//     isDiscounted: true,
+//   },
+// ];
 
-console.log(arr.every((elem) => elem.price > 1));
-console.log(arr.every((elem) => elem.price > 2));
-console.log(arr.some((elem) => elem.price > 2));
-console.log(arr.every((elem) => elem.price == 2));
-console.log(arr.some((elem) => elem.price == 2));
-console.log(arr.some((elem) => elem.name == "cola"));
-console.log(arr.every((elem) => elem.name == "cola"));
+// console.log(arr.every((elem) => elem.price > 1));
+// console.log(arr.every((elem) => elem.price > 2));
+// console.log(arr.some((elem) => elem.price > 2));
+// console.log(arr.every((elem) => elem.price == 2));
+// console.log(arr.some((elem) => elem.price == 2));
+// console.log(arr.some((elem) => elem.name == "cola"));
+// console.log(arr.every((elem) => elem.name == "cola"));
 
-console.log(arr.every((elem) => elem.isDiscounted));
-console.log(arr.some((elem) => elem.isDiscounted));
+// console.log(arr.every((elem) => elem.isDiscounted));
+// console.log(arr.some((elem) => elem.isDiscounted));
+
+let a = new Number(8);
+let b = a;
+let c = a.valueOf();
+
+console.log(a);
+console.log(b);
+console.log(c);
