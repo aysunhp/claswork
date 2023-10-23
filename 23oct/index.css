@@ -1,0 +1,30 @@
+.wrapper {
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  left: 45%;
+  margin-top: 40px;
+}
