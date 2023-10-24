@@ -1,0 +1,27 @@
+.container {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+span {
+  font-weight: bold;
+}
+div.inputBox {
+  width: 50%;
+  margin: 0 auto;
+}
+.spanBox {
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(177, 10, 10);
+}
+
+.input {
+  width: 100%;
+}
