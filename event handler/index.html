@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+
+        <form action="">
+            <h1>Creat your account</h1>
+            <input type="text" placeholder="Name" class="form-control name"><br>
+
+            <input type="text" placeholder="Surname" class="form-control surname"><br>
+
+            <label for="hobby">Select your gender:</label><br><br>
+            <input type="radio" class="gender" id="male" name="gender" value="male">
+            <label for="book">Male</label><br>
+            <input type="radio" class="gender" id="female" name="gender" value="female" checked>
+            <label for="music">Famale</label><br><br>
+
+
+            <input type="number" placeholder="Age" class="form-control age"> <br>
+
+            <label for="hobby">Select your hobby:</label><br><br>
+            <input type="checkbox" class="hobby" id="book" name="Reading book" value="book">
+            <label for="book">Reading book</label><br>
+            <input type="checkbox" class="hobby" id="music" name="Listening music" value="music">
+            <label for="music">Listening music</label><br>
+            <input type="checkbox" class="hobby" id="friend" name="Friend" value="friend">
+            <label for="frind">Friend</label><br>
+
+            <div class="input-group mb-3">
+                <label for="inputGroupSelect01">Birth Place</label>
+                <select class="form-select birth-place" id="birth-place">
+                    <option selected>Choose...</option>
+                    <option value="az">Azerbijan</option>
+                    <option value="tr">Turkey</option>
+                    <option value="it">Italy</option>
+                    <option value="gr">Germany</option>
+                </select>
+            </div>
+            <button class="btn btn-info submitBtn" type="submit">Submit</button><br><br>
+
+        </form>
+
+        <section id="cards">
+    </div>
+    <div class="studentBtn">
+        <button class="btn btn-success cardBtn" type="submit">Students</button>
+    </div>
+
+    <div class="cards-wrapper row">
+
+    </div>
+    <script src="./index.js"></script>
+    </section>
+</body>
+
+</html>

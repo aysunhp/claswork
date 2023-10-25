@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+input#friend {
+  margin-bottom: 20px;
+}
+h1 {
+  margin: 30px;
+}
