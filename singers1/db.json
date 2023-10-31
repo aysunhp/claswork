@@ -1,0 +1,28 @@
+{
+  "singers": [
+    {
+      "id": 1,
+      "name": "Adele",
+      "nationality": "British",
+      "age": "34",
+      "genre": "R&B",
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTkOhSoYRu7Yg8f8zO8Ah8oTFJ4o5MYAT-nQWrR8D5WviWt4PV9"
+    },
+    {
+      "id": 2,
+      "name": "Beyonce",
+      "nationality": "American",
+      "age": "36",
+      "genre": "POP",
+      "image": "https://www.hollywoodreporter.com/wp-content/uploads/2021/08/Beyonce-Grammys-GettyImages-1307114656-H-2021.jpg?w=1296"
+    },
+    {
+      "id": 3,
+      "name": "Shawn Mendes",
+      "nationality": "British",
+      "age": "27",
+      "genre": "POP",
+      "image": "https://media.architecturaldigest.com/photos/6373facd66943d5d1affc66d/4:3/w_2399,h_1799,c_limit/1202825320"
+    }
+  ]
+}
