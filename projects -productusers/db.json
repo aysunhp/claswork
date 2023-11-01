@@ -1,0 +1,174 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user123",
+      "email": "user123@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "username": "johndoe",
+      "email": "john.doe@email.com",
+      "password": "securePassword"
+    },
+    {
+      "id": 3,
+      "username": "alice_smith",
+      "email": "alice.smith@email.com",
+      "password": "mySecretPassword"
+    },
+    {
+      "id": 4,
+      "username": "test_user",
+      "email": "testuser@testmail.com",
+      "password": "test1234"
+    },
+    {
+      "newUser": {
+        "name": "Est culpa distinctio",
+        "password": "Pa$$w0rd!",
+        "email": "ruqogojug@mailinator.com"
+      },
+      "id": 5
+    },
+    {
+      "newUser": {
+        "name": "Molestiae quas est n",
+        "password": "Pa$$w0rd!",
+        "email": "fubukawe@mailinator.com"
+      },
+      "id": 6
+    },
+    {
+      "newUser": {
+        "name": "Nihil dignissimos co",
+        "password": "Pa$$w0rd!",
+        "email": "hefazoryh@mailinator.com"
+      },
+      "id": 7
+    },
+    {
+      "newUser": {
+        "name": "Ullamco accusamus nu",
+        "password": "Pa$$w0rd!",
+        "email": "dyfavuc@mailinator.com"
+      },
+      "id": 8
+    },
+    {
+      "newUser": {
+        "name": "Aliquam quaerat erro",
+        "password": "Pa$$w0rd!",
+        "email": "nyca@mailinator.com"
+      },
+      "id": 9
+    },
+    {
+      "newUser": {
+        "name": "Atque deserunt cupid",
+        "password": "Pa$$w0rd!",
+        "email": ""
+      },
+      "id": 10
+    },
+    {
+      "newUser": {
+        "name": "Atque deserunt cupid",
+        "password": "Pa$$w0rd!",
+        "email": ""
+      },
+      "id": 11
+    },
+    {
+      "newUser": {
+        "name": "Atque deserunt cupid",
+        "password": "Pa$$w0rd!",
+        "email": ""
+      },
+      "id": 12
+    },
+    {
+      "newUser": {
+        "username": "Dolorum esse in ut s",
+        "password": "Pa$$w0rd!",
+        "email": "jiwaviz@mailinator.com"
+      },
+      "id": 13
+    },
+    {
+      "newUser": {
+        "username": "Atque deserunt cupid",
+        "password": "Pa$$w0rd!",
+        "email": ""
+      },
+      "id": 14
+    },
+    {
+      "newUser": {
+        "username": "Atque deserunt cupid",
+        "password": "Pa$$w0rd!",
+        "email": ""
+      },
+      "id": 15
+    },
+    {
+      "newUser": {
+        "username": "Atque deserunt cupid",
+        "password": "Pa$$w0rd!",
+        "email": ""
+      },
+      "id": 16
+    },
+    {
+      "newUser": {
+        "username": "Atque deserunt cupid",
+        "password": "Pa$$w0rd!",
+        "email": ""
+      },
+      "id": 17
+    },
+    {
+      "newUser": {
+        "username": "Inventore doloribus ",
+        "password": "Pa$$w0rd!",
+        "email": "cekuza@mailinator.com"
+      },
+      "id": 18
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Product A",
+      "price": 19.99,
+      "stockCount": 50,
+      "imageLink": "https://example.com/productA.jpg",
+      "description": "Product A is a high-quality item for your needs."
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "price": 29.99,
+      "stockCount": 25,
+      "imageLink": "https://example.com/productB.jpg",
+      "description": "Product B is a versatile and durable product."
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "price": 14.95,
+      "stockCount": 75,
+      "imageLink": "https://example.com/productC.jpg",
+      "description": "Product C is an affordable and stylish choice."
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "price": 49.99,
+      "stockCount": 10,
+      "imageLink": "https://example.com/productD.jpg",
+      "description": "Product D is a premium option with advanced features."
+    }
+  ]
+}
