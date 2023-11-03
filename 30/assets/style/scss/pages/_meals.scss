@@ -1,0 +1,23 @@
+main {
+  .container {
+    margin-top: 40px;
+
+    .meals-input {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .sort-by-price-btn {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .cards {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 20px;
+    }
+  }
+}

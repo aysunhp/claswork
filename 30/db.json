@@ -1,0 +1,157 @@
+{
+  "singers": [
+    {
+      "id": 1,
+      "name": "Adele",
+      "count": 1,
+      "nationality": "British",
+      "age": "33",
+      "genre": "R&B",
+      "image": "https://www.billboard.com/wp-content/uploads/2023/09/adele-las-vegas-residency-2022-billboard-1548.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Beyonce",
+      "count": 1,
+      "nationality": "American",
+      "age": "40",
+      "genre": "R&B",
+      "image": "https://www.hollywoodreporter.com/wp-content/uploads/2021/08/Beyonce-Grammys-GettyImages-1307114656-H-2021.jpg?w=1296"
+    },
+    {
+      "id": 3,
+      "name": "Shawn Mendes",
+      "count": 1,
+      "nationality": "British",
+      "age": "27",
+      "genre": "POP",
+      "image": "https://media.architecturaldigest.com/photos/6373facd66943d5d1affc66d/4:3/w_2399,h_1799,c_limit/1202825320"
+    },
+    {
+      "id": 4,
+      "name": "Edd Sheron",
+      "count": 1,
+      "nationality": "British",
+      "age": "31",
+      "genre": "POP",
+      "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg"
+    },
+    {
+      "id": 5,
+      "name": "The Weekend",
+      "count": 1,
+      "nationality": "Canadian",
+      "age": "33",
+      "genre": "R&B",
+      "image": "https://hiphop-n-more.com/wp-content/uploads/2023/04/the-weeknd-7.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Lana Del Rey",
+      "count": 1,
+      "nationality": "American",
+      "age": 36,
+      "genre": "Indie Pop, Baroque Pop, Alternative",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/singer-lana-del-rey-poses-for-a-portrait-during-a-visit-to-news-photo-1590067847.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Miley Cyrus",
+      "count": 1,
+      "nationality": "American",
+      "age": 31,
+      "genre": "Pop/Rock",
+      "image": "https://www.billboard.com/wp-content/uploads/media/miley-cyrus-grammys-c-2019-billboard-u-1548.jpg?w=942&h=623&crop=1"
+    },
+    {
+      "id": 8,
+      "name": "Taylor Swift",
+      "count": 1,
+      "nationality": "American",
+      "age": 32,
+      "genre": "Pop/Country",
+      "image": "https://stylecaster.com/wp-content/uploads/2022/10/Taylor-Swift-3.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Justin Bieber",
+      "count": 1,
+      "nationality": "Canadian",
+      "age": 28,
+      "genre": "Pop",
+      "image": "https://gurulex.com/wp-content/uploads/2021/10/justin-bieber-life.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Rihanna",
+      "nationality": "Barbadian",
+      "age": 34,
+      "genre": "R&B/Pop",
+      "image": "https://variety.com/wp-content/uploads/2023/02/Screen-Shot-2023-02-09-at-2.09.03-PM.png?w=1000&h=563&crop=1&resize=681%2C383"
+    }
+  ],
+  "meals": [
+    {
+      "id": 1,
+      "name": "Spaghetti",
+      "count": 1,
+      "price": 12.99,
+      "ingredients": [
+        "onion",
+        "spaghetti",
+        "olive oil",
+        "Parmesan cheese",
+        "tomatoes",
+        "chicken"
+      ],
+      "image": "https://www.archanaskitchen.com/images/archanaskitchen/10-Brands/DelMonte-KidsRecipes/Spaghetti_Pasta_Recipe_In_Creamy_Tomato_Sauce_-_Kids_Recipes_Made_With_Del_Monte-3.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Chicken with mushroom",
+      "count": 1,
+      "price": 10.0,
+      "ingredients": ["mushroom", "butter", "garlic", "green onion", "chicken"],
+      "image": "https://healthyrecipesblogs.com/wp-content/uploads/2021/06/chicken-and-mushrooms-1-2021.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Taco",
+      "count": 1,
+      "price": 8.99,
+      "ingredients": ["chili powder", "cumin", "beef", "tomato sauce"],
+      "image": "https://cdn.mexicali-blue.com/what_is_the_most_traditional_food_in_mexico.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sushi",
+      "count": 1,
+      "price": 11.5,
+      "ingredients": ["rice", "fish", "nori", "soya sauce", "wasabi"],
+      "image": "https://www.marionskitchen.com/wp-content/uploads/2021/08/Dragon-Roll8081.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Risotto",
+      "count": 1,
+      "price": 9.0,
+      "ingredients": ["rice", "parmesan", "black peppe"],
+      "image": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2022-11-vegan-risotto%2Fvegan-risotto-0257"
+    },
+    {
+      "id": 6,
+      "name": "Pizza",
+      "count": 1,
+      "price": 7.45,
+      "ingredients": [
+        "floor",
+        "meat",
+        "sousage",
+        "tomato",
+        "mushroom",
+        "pepper"
+      ],
+      "image": "https://thecozycook.com/wp-content/uploads/2023/03/Homemade-Pizza-1.jpg"
+    }
+  ]
+}

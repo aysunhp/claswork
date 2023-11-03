@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(191deg, rgb(33, 180, 183) 0%, rgb(27, 162, 235) 100%);
+}
+nav ul {
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+nav ul a {
+  color: black;
+  font-weight: 500;
+}
+
+.wishlist {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px lightgray;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  min-height: 100px;
+  padding: 20px;
+}
+.wishlist .favItem {
+  width: 90%;
+  border: 1px solid black;
+}
+
+main .container {
+  margin-top: 40px;
+}
+main .container .meals-input {
+  width: 50%;
+  margin: 0 auto;
+}
+main .container .sort-by-price-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+main .container .cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+main .container {
+  margin-top: 40px;
+}
+main .container .singer-input {
+  width: 50%;
+  margin: 0 auto;
+}
+main .container .sort-by-name-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+main .container .cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}/*# sourceMappingURL=main.css.map */

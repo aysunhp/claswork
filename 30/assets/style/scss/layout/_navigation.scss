@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    191deg,
+    rgb(33, 180, 183) 0%,
+    rgb(27, 162, 235) 100%
+  );
+  ul {
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    a {
+      color: black;
+      font-weight: 500;
+    }
+  }
+}
