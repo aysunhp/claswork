@@ -110,8 +110,14 @@
       "id": 2,
       "name": "Chicken with mushroom",
       "count": 1,
-      "price": 10.0,
-      "ingredients": ["mushroom", "butter", "garlic", "green onion", "chicken"],
+      "price": 10,
+      "ingredients": [
+        "mushroom",
+        "butter",
+        "garlic",
+        "green onion",
+        "chicken"
+      ],
       "image": "https://healthyrecipesblogs.com/wp-content/uploads/2021/06/chicken-and-mushrooms-1-2021.jpg"
     },
     {
@@ -119,7 +125,12 @@
       "name": "Taco",
       "count": 1,
       "price": 8.99,
-      "ingredients": ["chili powder", "cumin", "beef", "tomato sauce"],
+      "ingredients": [
+        "chili powder",
+        "cumin",
+        "beef",
+        "tomato sauce"
+      ],
       "image": "https://cdn.mexicali-blue.com/what_is_the_most_traditional_food_in_mexico.jpg"
     },
     {
@@ -127,15 +138,25 @@
       "name": "Sushi",
       "count": 1,
       "price": 11.5,
-      "ingredients": ["rice", "fish", "nori", "soya sauce", "wasabi"],
+      "ingredients": [
+        "rice",
+        "fish",
+        "nori",
+        "soya sauce",
+        "wasabi"
+      ],
       "image": "https://www.marionskitchen.com/wp-content/uploads/2021/08/Dragon-Roll8081.jpg"
     },
     {
       "id": 5,
       "name": "Risotto",
       "count": 1,
-      "price": 9.0,
-      "ingredients": ["rice", "parmesan", "black peppe"],
+      "price": 9,
+      "ingredients": [
+        "rice",
+        "parmesan",
+        "black peppe"
+      ],
       "image": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2022-11-vegan-risotto%2Fvegan-risotto-0257"
     },
     {
@@ -152,6 +173,55 @@
         "pepper"
       ],
       "image": "https://thecozycook.com/wp-content/uploads/2023/03/Homemade-Pizza-1.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Spaghetti",
+      "email": "sap@gmail.com",
+      "password": "1234",
+      "orders": []
+    },
+    {
+      "username": "elnur",
+      "email": "elnur@gmail.com",
+      "password": "Pa$$w0rd!",
+      "balance": "2442",
+      "order": [],
+      "id": 2
+    },
+    {
+      "username": "aysunhp",
+      "email": "aysun@gmail.com",
+      "password": "Pa$$w0rd!",
+      "balance": "2334",
+      "order": [],
+      "id": 3
+    },
+    {
+      "username": "aysun",
+      "email": "aysun@gmail.com",
+      "password": "1234",
+      "balance": "3",
+      "order": [],
+      "id": 4
+    },
+    {
+      "username": "Culpa reprehenderit",
+      "email": "pebarorab@mailinator.com",
+      "password": "Sldkgd",
+      "balance": "100",
+      "order": [],
+      "id": 5
+    },
+    {
+      "username": "skdhj",
+      "email": "saefh@gmail.com",
+      "password": "Sala",
+      "balance": "1435",
+      "order": [],
+      "id": 6
     }
   ]
 }

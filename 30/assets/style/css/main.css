@@ -29,6 +29,31 @@ nav ul a {
   font-weight: 500;
 }
 
+body {
+  background-color: whitesmoke;
+}
+body .register-form {
+  margin-top: 50px;
+  width: 40%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+}
+body .register-form .login-btn {
+  width: 100%;
+}
+
+body {
+  background-color: whitesmoke;
+}
+body .login-page {
+  margin-top: 50px;
+  width: 30%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+}
+
 .wishlist {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: 1px lightgray;
