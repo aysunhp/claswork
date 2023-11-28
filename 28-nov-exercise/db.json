@@ -1,0 +1,69 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "description": "Devices and gadgets powered by electricity."
+    },
+    {
+      "id": 2,
+      "name": "Clothing",
+      "description": "Apparel and accessories for various occasions."
+    },
+    {
+      "id": 3,
+      "name": "Books",
+      "description": "Literary works in various genres."
+    },
+    {
+      "id": 4,
+      "name": "Home and Garden",
+      "description": "Items for home decor and gardening."
+    },
+    {
+      "id": 5,
+      "name": "Sports and Outdoors",
+      "description": "Equipment and gear for outdoor activities and sports."
+    },
+    {
+      "id": 6,
+      "name": "Health and Wellness",
+      "description": "Products and services for maintaining a healthy lifestyle."
+    },
+    {
+      "id": 7,
+      "name": "Toys and Games",
+      "description": "Entertainment and play items for all ages."
+    },
+    {
+      "id": 8,
+      "name": "Automotive",
+      "description": "Accessories and tools for vehicles."
+    },
+    {
+      "id": 9,
+      "name": "Food and Beverages",
+      "description": "Edible items and beverages for consumption."
+    },
+    {
+      "id": 10,
+      "name": "Art and Crafts",
+      "description": "Creative materials and artworks."
+    },
+    {
+      "name": "salamm",
+      "description": "hello",
+      "id": 11
+    },
+    {
+      "name": "hii",
+      "description": "this is so chick",
+      "id": 12
+    },
+    {
+      "name": "Aysun",
+      "description": "Sebine",
+      "id": 13
+    }
+  ]
+}

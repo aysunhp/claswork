@@ -42,6 +42,13 @@ submit.addEventListener("click", function () {
   let img = image.value;
   let inputAge = age.value;
   let inputName = name.value;
-  let card = document.querySelector("card");
+  <div class="card col-3" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+      <h1></h1>
+      <span></span>
+  </div>
+</div>
+
   container.appendChild(card);
 });

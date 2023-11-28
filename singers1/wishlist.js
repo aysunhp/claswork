@@ -27,7 +27,7 @@ fetch("http://localhost:3000/singers")
 
             let index = arr.indexOf(this.name);
             console.log(index);
-            arr.splice(index, 1);
+            let remved =arr.splice(index, 1);
             localStorage.setItem("fav", JSON.stringify(arr));
           });
         });
