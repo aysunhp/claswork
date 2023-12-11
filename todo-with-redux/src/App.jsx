@@ -1,6 +1,7 @@
 import "./App.css";
 import AddTodos from "./components/AddTodos";
 import PizzaApp from "./components/PizzaApp";
+import Products from "./components/Products";
 import TodoApp from "./components/TodoApp";
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <>
       {/* <AddTodos />
       <TodoApp /> */}
-      <PizzaApp />
+      {/* <PizzaApp /> */}
+      <Products />
     </>
   );
 }
