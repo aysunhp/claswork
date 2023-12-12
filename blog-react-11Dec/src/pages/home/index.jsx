@@ -1,83 +1,65 @@
 import React, { useEffect, useState } from "react";
-import { Card, Button } from "antd";
+import { Card, Button, Input } from "antd";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 const { Meta } = Card;
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { deleteBlog, editBlog } from "../../redux/slices/blogSlice";
+import { deleteBlog, editBlog, setBlog } from "../../redux/slices/blogSlice";
 import Navbar from "../../components/Navbar";
 import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const [blogs, setBlogs] = useState([]);
-  const [fakeBlogs, setFakeBlogs] = useState([]);
-  const [clicked, setClicked] = useState([]);
+  const blogs = useSelector((state) => state.blog.blogs);
   const [edit, setEdit] = useState(false);
   const [editName, setEditName] = useState("");
   const [editContent, setEditContent] = useState("");
   const [editId, setEditId] = useState("");
+  const [sortedPosts, setSortedPosts] = useState(blogs);
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [search, setSearch] = useState("");
+
+  console.log(blogs);
+  console.log(sortedPosts);
   useEffect(() => {
-    axios
-      .get("https://65707df409586eff66418003.mockapi.io/api/blogs")
-      .then((res) => {
-        setBlogs(res.data);
-        setFakeBlogs(res.data);
-      });
-  }, [blogs, clicked]);
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get(
+          "https://65707df409586eff66418003.mockapi.io/api/blogs"
+        );
+        dispatch(setBlog(response.data));
+      } catch (error) {
+        console.error("Error posts", error);
+      }
+    };
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://65707df409586eff66418003.mockapi.io/api/blogs"
-  //       );
-  //       setBlogs(response.data);
-  //       setFakeBlogs(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error.message);
-  //     }
-  //   };
+    fetchPosts;
+  }, [dispatch]);
 
-  //   fetchData();
-  // }, [blogs, clicked]);
+  const sortBlogs = () => {
+    const sorted = [...blogs].sort((a, b) => {
+      if (sortOrder == "asc") {
+        return a.name.localeCompare(b.name);
+      } else {
+        return b.name.localeCompare(a.name);
+      }
+    });
+    const filteredBlogs = sorted.filter((blog) =>
+      blog.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setSortedPosts(filteredBlogs);
+  };
+
+  useEffect(() => {
+    sortBlogs();
+  }, [sortOrder, blogs, search]);
+
   return (
     <>
       <Navbar />
       <h1 style={{ textAlign: "center", marginTop: "20px" }}>My Blog</h1>
-      {/* <div
-        className="buttons"
-        style={{
-          margin: "20px auto",
-          width: "60%",
-          display: "flex",
-          justifyContent: "space-evenly",
-          marginBottom: "20px",
-        }}
-      >
-        <Button
-          onClick={() => {
-            let updated = fakeBlogs.sort((a, b) =>
-              a.name.localeCompare(b.name)
-            );
-            setBlogs(updated);
-          }}
-        >
-          Sort by Name
-        </Button>
-        <Button
-          onClick={() => {
-            let updated = fakeBlogs.sort((a, b) =>
-              a.content.localeCompare(b.content)
-            );
-            setBlogs(updated);
-          }}
-        >
-          Sort by Content
-        </Button>
-      </div> */}
       <div
         className="buttons"
         style={{
@@ -86,28 +68,22 @@ const Home = () => {
           display: "flex",
           justifyContent: "space-evenly",
           marginBottom: "20px",
+          gap: "40px",
         }}
       >
         <Button
           onClick={() => {
-            let updated = fakeBlogs.sort((a, b) =>
-              a.name.localeCompare(b.name)
-            );
-            setBlogs(updated);
+            setSortOrder(sortOrder == "asc" ? "desc" : "asc");
           }}
         >
-          Sort by Name
+          Sort {sortOrder == "asc" ? "Z-A" : "A-Z"}
         </Button>
-        <Button
-          onClick={() => {
-            let updated = fakeBlogs.sort((a, b) =>
-              a.content.localeCompare(b.content)
-            );
-            setBlogs(updated);
+        <Input
+          placeholder="Search Blog"
+          onChange={(e) => {
+            setSearch(e.target.value);
           }}
-        >
-          Sort by Content
-        </Button>
+        ></Input>
       </div>
       <div
         className="containerr-form"
@@ -161,21 +137,23 @@ const Home = () => {
           <button
             type="submit"
             onClick={() => {
-              setEdit(false);
-              let obj = {
-                name: editName,
-                content: editContent,
-                id: editId,
-              };
-              let updated = blogs.filter((item) => item.id != editId);
-              updated.push(obj);
+              try {
+                setEdit(false);
+                let obj = {
+                  name: editName,
+                  content: editContent,
+                  id: editId,
+                };
+                dispatch(editBlog({ id: editId, obj: obj }));
 
-              setBlogs(updated);
-              axios.put(
-                "https://65707df409586eff66418003.mockapi.io/api/blogs/" +
-                  editId,
-                obj
-              );
+                axios.put(
+                  "https://65707df409586eff66418003.mockapi.io/api/blogs/" +
+                    editId,
+                  obj
+                );
+              } catch (error) {
+                console.error("Error editing blog", error);
+              }
             }}
             style={{
               width: "10%",
@@ -201,8 +179,8 @@ const Home = () => {
           flexWrap: "wrap",
         }}
       >
-        {blogs &&
-          blogs.map((blogItem) => {
+        {sortedPosts &&
+          sortedPosts.map((blogItem) => {
             return (
               <Card
                 key={uuidv4()}
@@ -224,16 +202,15 @@ const Home = () => {
                   <DeleteIcon
                     style={{ color: "red" }}
                     onClick={() => {
-                      setClicked(!clicked);
-                      let updatedBlog = blogs.filter(
-                        (item) => item.id != blogItem.id
-                      );
-                      setBlogs(updatedBlog);
-                      // dispatch(deleteBlog(blogItem.id));
-                      axios.delete(
-                        "https://65707df409586eff66418003.mockapi.io/api/blogs/" +
-                          blogItem.id
-                      );
+                      try {
+                        axios.delete(
+                          "https://65707df409586eff66418003.mockapi.io/api/blogs/" +
+                            blogItem.id
+                        );
+                        dispatch(deleteBlog(blogItem.id));
+                      } catch (error) {
+                        console.error("Error deleting blog", error);
+                      }
                     }}
                   />
                   <EditIcon
