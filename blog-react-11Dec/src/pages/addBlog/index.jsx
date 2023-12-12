@@ -31,7 +31,7 @@ const AddBlog = () => {
             e.preventDefault();
           }}
           style={{
-            width: "50%",
+            width: "70%",
             height: "100vh",
             display: "flex",
             flexDirection: "column",
@@ -54,6 +54,7 @@ const AddBlog = () => {
               borderRadius: "7px",
               borderColor: "lightgray",
               marginBottom: "20px",
+              padding: "10px",
             }}
           />
           <input
@@ -69,19 +70,23 @@ const AddBlog = () => {
               borderRadius: "7px",
               borderColor: "lightgray",
               marginBottom: "20px",
+              padding: "10px",
             }}
           />
           <button
             type="submit"
             onClick={() => {
               dispatch(addBlog());
+              dispatch(getName(""));
+              dispatch(getContent(""));
             }}
             style={{
-              width: "10%",
-              height: "30px",
+              width: "15%",
+              height: "40px",
               borderRadius: "7px",
               backgroundColor: "lightblue",
               borderColor: "lightblue",
+              padding: "10px",
             }}
           >
             Add
