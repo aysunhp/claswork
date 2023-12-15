@@ -215,7 +215,7 @@ formHuman.addEventListener("submit", function (e) {
       `${surnameInp.value}`,
       Number(ageInp.value),
       Number(salaryInp.value),
-      [`${skillsInp.value}`],
+      `${skillsInp.value}`.split(","),
       Position.HR
     );
 
