@@ -1,7 +1,7 @@
 enum Position {
-  Manager,
-  HR,
-  Marketing,
+  Manager = "Manager",
+  HR = "HR",
+  Marketing = "Marketing",
 }
 
 interface IHuman {
@@ -70,8 +70,8 @@ class Employee extends Human implements IEmployee<string[]> {
     this.position = position;
   }
 
-  getInfo(): void {
-    console.log("This is Employee");
+  getInfo(): string {
+    return `${this.name}  ${this.surname}  work in ${this.position}`;
   }
 }
 
@@ -97,8 +97,8 @@ class Student extends Human implements IStudent<string[]> {
     }
   }
 
-  getInfo(): void {
-    console.log("This is Student");
+  getInfo(): string {
+    return `${this.name}  ${this.surname}  study in ${this.groupName} with ${this.GPA}GPA`;
   }
 
   hasPassed(): boolean {
@@ -151,6 +151,7 @@ let student1 = new Student(
 // console.log(student1.fullName);
 // console.log(student1.hasPassed());
 
+let list = document.querySelector<HTMLUListElement>("ul")!;
 let formHuman = document.querySelector<HTMLFormElement>(".formHuman")!;
 let nameInp = document.querySelector<HTMLInputElement>(".name")!;
 let surnameInp = document.querySelector<HTMLInputElement>(".surname")!;
@@ -170,13 +171,13 @@ select.addEventListener("change", function (e) {
   }
 });
 
-let groupName = document.querySelector<HTMLInputElement>(".groupName");
+let groupNameInp = document.querySelector<HTMLInputElement>(".groupName")!;
 
-let hobbiesInp = document.querySelector<HTMLInputElement>(".hobbies");
-let GPAInp = document.querySelector<HTMLInputElement>(".GPA");
-let salaryInp = document.querySelector<HTMLInputElement>(".salary");
-let skillsInp = document.querySelector<HTMLInputElement>(".skills");
-let positionInp = document.querySelector<HTMLInputElement>(".position");
+let hobbiesInp = document.querySelector<HTMLInputElement>(".hobbies")!;
+let GPAInp = document.querySelector<HTMLInputElement>(".GPA")!;
+let salaryInp = document.querySelector<HTMLInputElement>(".salary")!;
+let skillsInp = document.querySelector<HTMLInputElement>(".skills")!;
+let positionInp = document.querySelector<HTMLSelectElement>(".position")!;
 
 formHuman.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -188,8 +189,51 @@ formHuman.addEventListener("submit", function (e) {
     hobbies: string[];
     GPA: number;
   }
-  
+
   if (select.value == "student") {
-    
+    let student2 = new Student(
+      `${nameInp.value}`,
+      `${surnameInp.value}`,
+      Number(ageInp.value),
+      `${groupNameInp.value}`,
+      [`${hobbiesInp.value}`],
+      Number(GPAInp.value)
+    );
+
+    console.log(student2);
+
+    list.innerHTML += `<li>${student2.getInfo()}</li>`;
+    clear();
+  } else if (select.value == "employee") {
+    let positionValue = positionInp.value;
+    enum PositionValue {
+      positionValue,
+    }
+
+    let employee2 = new Employee(
+      `${nameInp.value}`,
+      `${surnameInp.value}`,
+      Number(ageInp.value),
+      Number(salaryInp.value),
+      [`${skillsInp.value}`],
+      Position.HR
+    );
+
+    console.log(employee2);
+    list.innerHTML += `<li>${employee2.getInfo()}</li>`;
+    clear();
   }
 });
+
+function clear(): void {
+  studentForm.style.display = "none";
+  employeeForm.style.display = "none";
+  nameInp.value = "";
+  surnameInp.value = "";
+  ageInp.value = "";
+  groupNameInp.value = "";
+  hobbiesInp.value = "";
+  GPAInp.value = "";
+  salaryInp.value = "";
+  skillsInp.value = "";
+}

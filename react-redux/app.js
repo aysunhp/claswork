@@ -15,9 +15,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Position;
 (function (Position) {
-    Position[Position["Manager"] = 0] = "Manager";
-    Position[Position["HR"] = 1] = "HR";
-    Position[Position["Marketing"] = 2] = "Marketing";
+    Position["Manager"] = "Manager";
+    Position["HR"] = "HR";
+    Position["Marketing"] = "Marketing";
 })(Position || (Position = {}));
 var Human = /** @class */ (function () {
     function Human(name, surname, age) {
@@ -61,7 +61,7 @@ var Employee = /** @class */ (function (_super) {
         return _this;
     }
     Employee.prototype.getInfo = function () {
-        console.log("This is Employee");
+        return "".concat(this.name, "  ").concat(this.surname, "  work in ").concat(this.position);
     };
     return Employee;
 }(Human));
@@ -80,7 +80,7 @@ var Student = /** @class */ (function (_super) {
         return _this;
     }
     Student.prototype.getInfo = function () {
-        console.log("This is Student");
+        return "".concat(this.name, "  ").concat(this.surname, "  study in ").concat(this.groupName, " with ").concat(this.GPA, "GPA");
     };
     Student.prototype.hasPassed = function () {
         if (this._GPA <= 50) {
@@ -118,6 +118,7 @@ var student1 = new Student("jane", "smith", 17, "BF3", ["reading", "singing"], 9
 // console.log(student1.GPA);
 // console.log(student1.fullName);
 // console.log(student1.hasPassed());
+var list = document.querySelector("ul");
 var formHuman = document.querySelector(".formHuman");
 var nameInp = document.querySelector(".name");
 var surnameInp = document.querySelector(".surname");
@@ -137,7 +138,7 @@ select.addEventListener("change", function (e) {
         employeeForm.style.display = "block";
     }
 });
-var groupName = document.querySelector(".groupName");
+var groupNameInp = document.querySelector(".groupName");
 var hobbiesInp = document.querySelector(".hobbies");
 var GPAInp = document.querySelector(".GPA");
 var salaryInp = document.querySelector(".salary");
@@ -146,5 +147,32 @@ var positionInp = document.querySelector(".position");
 formHuman.addEventListener("submit", function (e) {
     e.preventDefault();
     if (select.value == "student") {
+        var student2 = new Student("".concat(nameInp.value), "".concat(surnameInp.value), Number(ageInp.value), "".concat(groupNameInp.value), ["".concat(hobbiesInp.value)], Number(GPAInp.value));
+        console.log(student2);
+        list.innerHTML += "<li>".concat(student2.getInfo(), "</li>");
+        clear();
+    }
+    else if (select.value == "employee") {
+        var positionValue = positionInp.value;
+        var PositionValue = void 0;
+        (function (PositionValue) {
+            PositionValue[PositionValue["positionValue"] = 0] = "positionValue";
+        })(PositionValue || (PositionValue = {}));
+        var employee2 = new Employee("".concat(nameInp.value), "".concat(surnameInp.value), Number(ageInp.value), Number(salaryInp.value), ["".concat(skillsInp.value)], Position.HR);
+        console.log(employee2);
+        list.innerHTML += "<li>".concat(employee2.getInfo(), "</li>");
+        clear();
     }
 });
+function clear() {
+    studentForm.style.display = "none";
+    employeeForm.style.display = "none";
+    nameInp.value = "";
+    surnameInp.value = "";
+    ageInp.value = "";
+    groupNameInp.value = "";
+    hobbiesInp.value = "";
+    GPAInp.value = "";
+    salaryInp.value = "";
+    skillsInp.value = "";
+}

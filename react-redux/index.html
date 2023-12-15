@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Human</h1>
     <form action="" class="formHuman">
-        <input type="text" class="name" placeholder="Enter name"><br>
-        <input type="text" class="surname" placeholder="Enter surname"><br>
-        <input type="text" class="age" placeholder="Enter age"><br>
-        <select name="select" id="select"><br>
-            <option selected disabled>Human</option>
-            <option value="student">Student</option>
-            <option value="employee">Employee</option>
+      <input type="text" class="name" placeholder="Enter name" /><br />
+      <input type="text" class="surname" placeholder="Enter surname" /><br />
+      <input type="text" class="age" placeholder="Enter age" /><br />
+      <select name="select" id="select">
+        <br />
+        <option selected disabled>Human</option>
+        <option value="student">Student</option>
+        <option value="employee">Employee</option>
+      </select>
+      <div class="student" style="display: none">
+        <input
+          type="text"
+          placeholder="Enter group name"
+          class="groupName"
+        /><br />
+        <input type="text" placeholder="Enter hobbies" class="hobbies" /><br />
+        <input type="text" placeholder="Enter GPA" class="GPA" /><br />
+      </div>
+      <div class="employee" style="display: none">
+        <input type="text" placeholder="Enter salary" class="salary" /><br />
+        <input type="text" placeholder="Enter skills" class="skills" /><br />
+
+        <select name="position" id="position" class="position">
+          <option value="HR">HR</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Manager">Manager</option>
         </select>
-        <div class="student" style="display: none;">
-            <input type="text" placeholder="Enter group name" class="groupName"><br>
-            <input type="text" placeholder="Enter hobbies" class="hobbies"><br>
-            <input type="text" placeholder="Enter GPA" class="GPA"><br>
-        </div>
-        <div class="employee" style="display: none;">
-            <input type="text" placeholder="Enter salary" class="salary"><br>
-            <input type="text" placeholder="Enter skills" class="skills"><br>
-            <input type="text" placeholder="Enter position" class="position"><br>
-        </div><br>
-        <input type="submit">
+        <br />
+      </div>
+      <br />
+      <input type="submit" />
     </form>
-    <ul>
-
-    </ul>
+    <ul></ul>
     <script src="./app.js"></script>
-</body>
-
+  </body>
 </html>
