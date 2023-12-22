@@ -1,0 +1,28 @@
+.users {
+  background-color: rgb(20, 34, 44);
+  width: 100%;
+  min-height: 100vh;
+  header {
+    width: 100%;
+    height: 50px;
+    border: 1px solid red;
+    background-color: #202b3ac2;
+    padding: 0px 30px;
+    input {
+      height: 30px;
+      background-color: lightgray;
+      border: white;
+      border-radius: 5px;
+      margin-top: 8px;
+      color: white;
+      padding: 0px 10px;
+      :focus {
+        border: none;
+      }
+    }
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

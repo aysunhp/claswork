@@ -1,33 +1,36 @@
 const User = require("../models/userModul");
 
 const getAllUser = async (req, res) => {
-  let allUser = await User.find({});
-  res.send(allUser);
+  let allUsers = await User.find({});
+  res.send(allUsers);
 };
 
 const postUser = async (req, res) => {
-  // // let findUser = await User.findOne({ id: req.body.id });
-  // if (findUser) {
-  //   res.send("This id exist");
-  // } else {
-  const newUser = new User(req.body);
-  newUser.save();
-  // }
+  let found = await User.findOne({ id: req.body.id });
+  if (found) {
+    console.log("This id exist");
+  } else {
+    let newUser = new User(req.body);
+    newUser.save();
+  }
 };
 
 const getUserById = async (req, res) => {
-  let id = req.params.id;
-  let findUser = await User.findOne({ id: id });
-  res.send(findUser);
+  let found = await User.findOne({ id: req.params.id });
+  res.send(found);
 };
 
-const deletedUser = async (req, res) => {
-  let id = req.params.id;
-  console.log(id);
-  let findUser = await User.findOne({ id: id });
-  console.log(findUser);
-  // let _id = findUser._id;
-  // let deleteUser1 = await User.findByIdAndDelete(_id);
+const deleteUser = async (req, res) => {
+  let found = await User.findOne({ id: req.params.id });
+  let _id = found._id;
+  let deleted = await User.findByIdAndDelete(_id);
 };
 
-module.exports = { postUser, getAllUser, getUserById, deletedUser };
+const updatedUser = async (req, res) => {
+  let updated = User.findOneAndUpdate({ id: req.params.id }, req.body);
+};
+
+const putUser = async (req, res) => {
+  let updated = User.replaceOne({ id: req.params.id }, req.body);
+};
+module.exports = { postUser, getAllUser, getUserById, deleteUser };
